@@ -14,3 +14,5 @@ RUN wget -c -t 0 --retry-connrefused https://master.dl.sourceforge.net/project/f
 WORKDIR flow-pgdb-0.74/
 
 RUN ./configure && make install
+
+ENTRYPOINT ["flow-pgdb"]
