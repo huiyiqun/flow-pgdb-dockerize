@@ -2,8 +2,8 @@ FROM centos:7
 
 ENV FLOW_PGDB_VER 0.74
 
-RUN sed -i "s_mirrorlist=_#mirrorlist=_" /etc/yum.repos.d/CentOS-Base.repo && \
-    sed -i "s_#baseurl=http://mirror.centos.org/_baseurl=https://mirrors.tuna.tsinghua.edu.cn/_" /etc/yum.repos.d/CentOS-Base.repo
+#RUN sed -i "s_mirrorlist=_#mirrorlist=_" /etc/yum.repos.d/CentOS-Base.repo && \
+    #sed -i "s_#baseurl=http://mirror.centos.org/_baseurl=https://mirrors.tuna.tsinghua.edu.cn/_" /etc/yum.repos.d/CentOS-Base.repo
 
 RUN yum update -y && yum groupinstall -y 'Development Tools' && \
     yum install -y wget postgresql-devel zlib-devel
